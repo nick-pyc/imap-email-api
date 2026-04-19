@@ -1,0 +1,10 @@
+services:
+  emailapi:
+    build: .
+    restart: always
+    ports:
+      - "6060:6060"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
